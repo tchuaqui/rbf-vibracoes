@@ -95,13 +95,13 @@ S_total*eigvec - eigval*A_total*eigvec
 
 
 
-m=2;
+m=1;
 sol_exacta=(m*pi/L)^2*sqrt((E*I)/(rho*A))*sqrt(1-(((m*pi/L)^2*E*I)/(k*G*A+(m*pi/L)^2*E*I)));
 sol_exacta_norm=sol_exacta*L^2*sqrt(rho*A/(E*I));
 %-------------graficos 
 
 
-p=2;
+p=1;
 lambda_mode_w(1:n,p)=lambda_vec(1:n,p)'*AA;
 lambda_mode_phi_x(1:n,p)=lambda_vec(n+1:end,p)'*AA;
 lambda_mode=[lambda_mode_w;lambda_mode_phi_x];
@@ -160,7 +160,7 @@ x_max=zeros(n_t,1);
 for i=1:n_t
 aux=x_t(1:n,i)'*AA;
 x_w(:,i)=aux';
-x_max(i)=x_w(ceil(n/4),i);   %!!!!!!!!!!!!!!!!!!!!!MUDAR DEPENDENDO DO MODO NATURAL!!!!!!!!!!
+x_max(i)=x_w(ceil(n/2),i);   %!!!!!!!!!!!!!!!!!!!!!MUDAR DEPENDENDO DO MODO NATURAL!!!!!!!!!!
 end
 
 figure(2)
